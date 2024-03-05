@@ -9,9 +9,9 @@ form.addEventListener("submit", (e) => {
 
 function proxy(target) {
   if (target.startsWith("https://") || target.startsWith("http://")) {
-    hideTab(window.location.href + "/go/" + btoa(target));
+    hideTab(window.location.href + "go/" + btoa(target));
   } else if (target.includes(".")) {
-    hideTab(window.location.href + "/go/" + btoa("https://" + target));
+    hideTab(window.location.href + "go/" + btoa("https://" + target));
   } else {
     alert("Errror. Please enter a valid URL");
   }
